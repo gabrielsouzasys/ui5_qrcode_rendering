@@ -16,12 +16,12 @@ Para executarS por NPM, realizar o npm install(npm start a seguir). (verificar e
 Caso queira testar a aplicação sem npm, executar apenas o index.html diretamente no localhost.
 
 
-##Scripts Padrões Fiori generator 
-    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5qrcoderendering-display\"",
-    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
-    "deploy": "fiori verify",
-    "deploy-config": "fiori add deploy-config",
-    "start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
-    "start-variants-management": "fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
-    "unit-tests": "fiori run --open 'test/unit/unitTests.qunit.html'",
-    "int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'" 
+## Scripts Padrões Fiori generator 
+"start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5qrcoderendering-display\"",
+"build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+"deploy": "fiori verify",
+"deploy-config": "fiori add deploy-config",
+"start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
+"start-variants-management": "fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
+"unit-tests": "fiori run --open 'test/unit/unitTests.qunit.html'",
+"int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'" 
