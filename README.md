@@ -1,36 +1,27 @@
 ## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Fri Aug 11 2023 23:39:27 GMT+0100 (Horário de Verão da Europa Ocidental)|
-|**App Generator**<br>@sap/generator-fiori-freestyle|
-|**App Generator Version**<br>1.10.3|
-|**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>simple|
-|**Service Type**<br>None|
-|**Service URL**<br>N/A
-|**Module Name**<br>ui5_qrcode_rendering|
-|**Application Title**<br>ui5_qrcode_rendering|
-|**Namespace**<br>|
-|**UI5 Theme**<br>sap_fiori_3|
-|**UI5 Version**<br>1.84.7|
-|**Enable Code Assist Libraries**<br>False|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
+“Desenvolvi este webapp que gera QR Codes para os personagens das coleções Appplaydu e kinder, para poder praticar e exercitar algumas atividades relacioandas a QRCODE com UI5. Apliquei meus conhecimentos e utilizei uma biblioteca que gera imagens de QR Codes de URL ou valores. bem como utilizei a biblioteca de QRReader para decodificar os Códigos gerados por este WebApp”
+
+* É possível gerar um QRCode por uma Url qualquer
+* Gerar um QRCode para um ID diretamente. (Exemplo VV380) 
+* Inicialmente Gera o QRCode VV001 com o link para download dos modelos 3d de Realidade Aumentada dentro do Appplaydu (https://play.google.com/store/apps/details?id=com.ferrero.applayduGP&hl=pt_PT&gl=US&pli=1) o Webapp incrementa a sequencia de códigos e gera o QRCode do novo link para o Scan.
+* Existe a opção de modificar a categoria dos grupos de QRCode. VV, VD, VU. Aumentando as possibilidades de Scan dos Modelos de RA. 
+
 
 ## ui5_qrcode_rendering
-
-ui5_qrcode_rendering
+ui5_qrcode_rendering utiliza uma lib dentro da pasta do projeto, não associada aos componentes do SAPUI5/OPENUI5
+Utilizei um custom control para poder renderizar os componentes em XML VIew.
 
 ### Starting the generated app
-
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply run the following from the generated app root folder:
-
-```
-    npm start
-```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+Para executarS por NPM, realizar o npm install(npm start a seguir). (verificar em index.html comentários sobre resources UI5)
+Caso queira testar a aplicação sem npm, executar apenas o index.html diretamente no localhost.
 
 
+##Scripts Padrões Fiori generator 
+    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#ui5qrcoderendering-display\"",
+    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+    "deploy": "fiori verify",
+    "deploy-config": "fiori add deploy-config",
+    "start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
+    "start-variants-management": "fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
+    "unit-tests": "fiori run --open 'test/unit/unitTests.qunit.html'",
+    "int-tests": "fiori run --open 'test/integration/opaTests.qunit.html'" 
