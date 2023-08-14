@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ui5_qrcode_rendering</title>
+    <style>
+        html,
+        body,
+        body>div,
+        #container,
+        #container-uiarea {
+            height: 100%;
+        }
+
+        /* 
+            Utilização de biblioteca OpenUI5 para hotlink, se desejar utilizar outras opções: segue abaixo.
+            Link Framework SAP UI5 https://sapui5.hana.ondemand.com/
+            JAVASCRIPT » src="resources/sap-ui-core.js" 
+                         src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        
+            Caso queira utilizar num servidor NodeJs ao invés de publicar diretamente o index.html
+            Substituir o src=" " para versão que aponta para a pasta resources.
+            Após o npm install, as bibliotecas serão associadas.
+        */
+    </style>
+
+    <script id="sap-ui-bootstrap" src="https://sapopenui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_fiori_3" data-sap-ui-resourceroots='{
+            "ui5qrcoderendering": "./"
+        }' data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true" data-sap-ui-frameOptions="trusted"></script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div data-sap-ui-component data-name="ui5qrcoderendering" data-id="container"
+        data-settings='{"id" : "ui5qrcoderendering"}' data-handle-validation="true"></div>
+</body>
+
+</html>
